@@ -74,6 +74,7 @@ class C0top < Formula
     EOS
 
     # Create the executable wrapper script in bin
+    chmod 0755, libexec/"c0top_launcher.py"
     bin.write_exec_script (libexec/"c0top_launcher.py")
     mv bin/"c0top_launcher.py", bin/"c0top"
   end
