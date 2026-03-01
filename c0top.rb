@@ -1,9 +1,9 @@
 class C0top < Formula
   desc "Comm0ns Dashboard CLI & TUI"
   homepage "https://github.com/Comm0ns-llc/c0top"
-  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.0.tar.gz"
-  version "1.0.0"
-  sha256 "6f6b1d3ce28601a4025214d44c95cb56b9bd698da94c515cbf5893a7b8701be2"
+  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.1.tar.gz"
+  version "1.0.1"
+  sha256 "eb0725392ce98acbf394f8164e1e4bdcc6717e6da7299a27d67cf74608df1082"
   license "MIT"
 
   depends_on "cmake" => :build
@@ -60,6 +60,8 @@ class C0top < Formula
 
           os.environ["SUPABASE_URL"] = url
           os.environ["SUPABASE_KEY"] = key
+          if session and "access_token" in session:
+              os.environ["SUPABASE_AUTH_TOKEN"] = session["access_token"]
 
           tui_bin = project_root / "comm0ns_tui"
           if not tui_bin.exists():
