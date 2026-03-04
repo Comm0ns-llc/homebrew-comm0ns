@@ -1,9 +1,9 @@
 class C0top < Formula
   desc "Comm0ns Dashboard CLI & TUI"
   homepage "https://github.com/Comm0ns-llc/c0top"
-  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.1.tar.gz"
-  version "1.0.1"
-  sha256 "eb0725392ce98acbf394f8164e1e4bdcc6717e6da7299a27d67cf74608df1082"
+  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.2.tar.gz"
+  version "1.0.2"
+  sha256 "e1a164b371ffc50c445932810c683414efea0cc6165f5fbc2b39aa21705f92f4"
   license "MIT"
 
   depends_on "cmake" => :build
@@ -28,9 +28,9 @@ class C0top < Formula
       from pathlib import Path
 
       project_root = Path(__file__).parent.resolve()
-      sys.path.insert(0, str(project_root))
+      sys.path.insert(0, str(project_root / "src"))
 
-      from src.tui_auth import ensure_tui_auth_session, AuthError
+      from tui_auth import ensure_tui_auth_session, AuthError
 
       SUPABASE_URL = "https://qoahsyycabfohobvxrzg.supabase.co"
       SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFvYWhzeXljYWJmb2hvYnZ4cnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4MDI3NzIsImV4cCI6MjA4MzM3ODc3Mn0.3TSx8SqJU7v7RmZb0Nhb29OQA2Nnmj2VH-Sp7l3NhEE"
