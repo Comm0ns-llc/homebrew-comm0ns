@@ -1,9 +1,9 @@
 class C0top < Formula
   desc "Comm0ns Dashboard CLI & TUI"
   homepage "https://github.com/Comm0ns-llc/c0top"
-  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.2.tar.gz"
-  version "1.0.2"
-  sha256 "e1a164b371ffc50c445932810c683414efea0cc6165f5fbc2b39aa21705f92f4"
+  url "https://github.com/Comm0ns-llc/c0top/archive/refs/tags/v1.0.3.tar.gz"
+  version "1.0.3"
+  sha256 "ae42dc6e82d8c904d66412d4c27a3c89f3857501e6393581c4b272b288ff771a"
   license "MIT"
 
   depends_on "cmake" => :build
